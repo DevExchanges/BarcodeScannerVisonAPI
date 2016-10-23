@@ -1,6 +1,7 @@
 package info.devexchanges.barcodescannermobilevisionapi;
 
 import android.content.Context;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements OnScannedListener
                 .setFacing(CameraSource.CAMERA_FACING_BACK)
                 .setRequestedPreviewSize(1600, 1024)
                 .setRequestedFps(15.0f)
+                .setAutoFocusEnabled(true)
                 .build();
     }
 
