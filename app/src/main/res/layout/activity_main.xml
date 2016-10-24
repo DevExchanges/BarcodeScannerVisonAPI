@@ -1,19 +1,25 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/topLayout"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:padding="16dp">
 
-    <info.devexchanges.barcodescannermobilevisionapi.CameraSourcePreview
-        android:id="@+id/preview"
+    <SurfaceView
+        android:id="@+id/surface_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
 
-        <info.devexchanges.barcodescannermobilevisionapi.GraphicOverlay
-            android:id="@+id/overlay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
 
-    </info.devexchanges.barcodescannermobilevisionapi.CameraSourcePreview>
+    <TextView
+        android:id="@+id/barcode_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="No Barcode"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
-</LinearLayout>
+</RelativeLayout>
